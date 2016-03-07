@@ -1,0 +1,56 @@
+:root {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: transparent;
+  text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  background: black;
+}
+
+body {
+  @include regular-font();
+  @include font-size($sm-font-size);
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+
+}
+
+/* Page transitions
+ * ==================================== */
+
+ .m-scene .scene_element {
+  animation-duration: 1400ms;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  position: relative;
+ }
+
+ .m-scene .scene_element--fadein {
+  animation-name: fadeIn;
+ }
+
+ .m-scene.is-exiting .scene_element {
+  animation-direction: alternate-reverse;
+ }
+
+ /*
+ * Keyframes
+ */
+ @keyframes fadeIn {
+  0% { opacity: 0; top: 30px; }
+  100% { opacity: 1; top:0; }
+ }

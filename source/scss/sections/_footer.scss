@@ -1,0 +1,26 @@
+/* ====================================
+ * Footer
+ * ==================================== */
+
+footer {
+  // margin-bottom: $base-spacing * 8;
+  a {
+    color: $color-black!important;
+    text-decoration: none;
+    &:hover {
+      color: $color-red!important;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      @include xs-font();
+      span {
+        padding-right: 10px;
+        color: $color-dark-gray;
+      }
+    }
+  }
+}
