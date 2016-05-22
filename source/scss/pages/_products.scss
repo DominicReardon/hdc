@@ -38,6 +38,7 @@
      li {
        list-style: none;
        border-bottom: 1px solid $color-black;
+       padding-right: 80px;
 
         a {
           @include md-font();
@@ -53,7 +54,7 @@
           }
           span {
             position: absolute;
-            right: 0;
+            right: -80px;
             text-decoration: underline;
             opacity:1;
             @include sm-font();
