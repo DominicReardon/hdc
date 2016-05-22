@@ -5,33 +5,27 @@
 .sustainability-management-page {
     .page a {
       color: white;
+      transition: color .4s;
+      &:hover {
+        color: $color-red;
+      }
     }
     .cloud {
-    position: relative;
-    left: 16.66%;
-    z-index: -1;
-    display: none;
-    @include breakpoint(lg) {
-      display: block;
-    }
-    @include breakpoint(xl) {
-      left: 8.33%;
-    }
-  }
+      position: relative;
+      left: 0;
+      z-index: 0;
+      display: none;
 
-  ul.important-list {
-   margin: 0;
-   padding: 0;
-   @include breakpoint(md) {
-    margin: 50px 0 0 0;
-   }
-   li {
-     list-style: none;
-     margin-bottom: 10px;
-     @include lg-font();
-     @include breakpoint(lg) {
-       @include xl-font();
-     }
-   }
+      @include breakpoint(md) {
+        display: block;
+        left: 16.66%;
+      }
+      @include breakpoint(xl) {
+        left: 8.33%;
+      }
+    }
+
+  .important-list-title {
+    margin: 50px 0 30px;
   }
 }

@@ -36,3 +36,29 @@
   color: gray;
   cursor: default;
 }
+
+.next-cta {
+  @include md-font();
+  text-decoration: none;
+  border: 2px solid;
+  padding: 30px 30px 120px;
+  margin: 30px 0;
+  display: block;
+  position: relative;
+  transition: color .4s;
+  span {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    text-decoration: underline;
+    opacity: 0;
+    transition: right .4s;
+  }
+  &:hover {
+    color: $color-red;
+    span {
+      opacity: 1;
+      right: 30px;
+    }
+  }
+}

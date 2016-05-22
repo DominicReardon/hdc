@@ -3,7 +3,13 @@
  * ==================================== */
 
 footer {
-  // margin-bottom: $base-spacing * 8;
+  .footer-logo {
+    svg {
+      width: 150px;
+      height: 30px;
+      margin-bottom: 30px;
+    }
+  }
   a {
     color: $color-black!important;
     text-decoration: none;
@@ -17,6 +23,7 @@ footer {
     li {
       list-style: none;
       @include xs-font();
+      margin-bottom: 12px;
       span {
         padding-right: 10px;
         color: $color-dark-gray;

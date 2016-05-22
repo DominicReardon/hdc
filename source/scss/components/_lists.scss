@@ -36,3 +36,19 @@ ul.normal-list {
     }
   }
 }
+
+ul.important-list {
+ margin: 0;
+ padding: 0;
+ @include breakpoint(md) {
+  margin: 0px 0 0 0;
+ }
+ li {
+   list-style: none;
+   margin-bottom: 10px;
+   @include md-font();
+   @include breakpoint(lg) {
+     @include md-font();
+   }
+  }
+}

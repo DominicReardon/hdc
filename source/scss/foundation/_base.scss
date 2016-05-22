@@ -26,7 +26,34 @@ body {
 img {
   width: 100%;
   height: auto;
+}
 
+.full-height {
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  background: black;
+  .friends {
+    // height: 61px;
+    // width: 80px;
+    margin: auto;
+    z-index: 999999;
+  }
+}
+.intro {
+  animation-name: fade-out;
+  animation-duration: 1.4s;
+  animation-delay: .5s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+ 0% { opacity: 1; visibility: visable;}
+ 100% { opacity: 0; visibility: hidden;}
 }
 
 /* Page transitions
@@ -40,7 +67,7 @@ img {
  }
 
  .m-scene .scene_element--fadein {
-  animation-name: fadeIn;
+  animation-name: fadeIn-moveUp;
  }
 
  .m-scene.is-exiting .scene_element {
@@ -50,7 +77,7 @@ img {
  /*
  * Keyframes
  */
- @keyframes fadeIn {
+ @keyframes fadeIn-moveUp {
   0% { opacity: 0; top: 30px; }
   100% { opacity: 1; top:0; }
  }
