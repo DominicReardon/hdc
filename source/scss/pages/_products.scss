@@ -3,6 +3,15 @@
  * ==================================== */
 
  .products-page {
+   .grid {
+     .col {
+       border-bottom: 1px solid black;
+       padding-top: 30px;
+     }
+     .middle {
+       background: rgba(darken($color-secondary, 4%),.9);
+     }
+   }
    .page a {
      color: white;
      &:hover {

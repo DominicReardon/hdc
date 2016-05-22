@@ -3,15 +3,21 @@
  * ==================================== */
 
 footer {
+  background: $color-black;
+  color: white;
+  margin-top: 90px;
   .footer-logo {
     svg {
       width: 150px;
       height: 30px;
       margin-bottom: 30px;
+      g {
+        fill: white;
+      }
     }
   }
   a {
-    color: $color-black!important;
+    // color: $color-black!important;
     text-decoration: none;
     &:hover {
       color: $color-red!important;
