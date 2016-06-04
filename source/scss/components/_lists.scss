@@ -50,5 +50,8 @@ ul.important-list {
    @include breakpoint(lg) {
      @include md-font();
    }
+   span {
+     font-weight: bold;
+   }
   }
 }

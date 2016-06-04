@@ -6,7 +6,10 @@
    .grid {
      .col {
        border-bottom: 1px solid black;
-       padding-top: 30px;
+       padding-top: 20px;
+       p {
+         margin-bottom: 20px;
+       }
      }
      .middle {
        background: rgba(darken($color-secondary, 4%),.9);
@@ -39,7 +42,19 @@
        list-style: none;
        border-bottom: 1px solid $color-black;
        padding-right: 80px;
+       span.image {
+         display: inline-block;
+         position: absolute;
+         left: 0;
+         transition: opacity .2s;
+          img {
+            max-width: 50px;
+            max-height: 30px;
+          }
+        }
+        span.text {
 
+        }
         a {
           @include md-font();
           color: $color-black;
@@ -48,15 +63,16 @@
           margin: 10px 0;
           position: relative;
           transition: all 400ms;
-          padding-left: 0;
+          padding-left: 60px;
           @include breakpoint(lg) {
             @include lg-font();
           }
-          span {
+          span.learn-more {
             position: absolute;
             right: -80px;
             text-decoration: underline;
             opacity:1;
+            transition: opacity .2s;
             @include sm-font();
             bottom: 0;
             @include breakpoint(lg) {
@@ -66,8 +82,11 @@
           &:hover {
             padding-left: 15px;
             color: $color-black;
-            span {
+            span.learn-more {
               opacity: 1;
+            }
+            span.image {
+              opacity: 0;
             }
           }
         }
