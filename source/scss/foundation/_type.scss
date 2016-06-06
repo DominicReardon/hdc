@@ -6,7 +6,7 @@ p, ul, ol, pre, table, blockquote {
 }
 
 h1, .h1 {
-
+  @include regular-font();
   @include xl-font();
   @include breakpoint(md) {
     @include xxl-font();
@@ -14,14 +14,17 @@ h1, .h1 {
 }
 
 h2, .h2 {
+  @include bold-font();
   @include xl-font();
 }
 
 h3, .h3 {
+  @include bold-font();
   @include lg-font();
 }
 
 h4, .h4 {
+  @include bold-font();
   @include md-font();
 }
 
@@ -49,7 +52,9 @@ p a {}
 
 em {}
 
-strong, b {}
+strong, b {
+  @include bold-font();
+}
 
 i {}
 

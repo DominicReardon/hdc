@@ -9,6 +9,10 @@
        padding-top: 20px;
        p {
          margin-bottom: 20px;
+         @include xs-font();
+         @include breakpoint(sm) {
+          @include sm-font();
+         }
        }
      }
      .middle {
@@ -41,7 +45,7 @@
      li {
        list-style: none;
        border-bottom: 1px solid $color-black;
-       padding-right: 80px;
+       padding-right: 100px;
        span.image {
          display: inline-block;
          position: absolute;
@@ -63,13 +67,15 @@
           margin: 10px 0;
           position: relative;
           transition: all 400ms;
-          padding-left: 60px;
+          @include breakpoint(sm) {
+            padding-left: 60px;
+          }
           @include breakpoint(lg) {
             @include lg-font();
           }
           span.learn-more {
             position: absolute;
-            right: -80px;
+            right: -100px;
             text-decoration: underline;
             opacity:1;
             transition: opacity .2s;
@@ -79,6 +85,12 @@
               opacity:0;
             }
           }
+          span.image {
+            display: none;
+            @include breakpoint(sm) {
+              display: block;
+            }
+          }
           &:hover {
             padding-left: 15px;
             color: $color-black;
@@ -86,7 +98,11 @@
               opacity: 1;
             }
             span.image {
-              opacity: 0;
+              display: none;
+              @include breakpoint(sm) {
+                display: block;
+                opacity: 0;
+              }
             }
           }
         }
