@@ -5,36 +5,15 @@
 var aeApp = aeApp || {};
 
 
-
-
 aeApp.scrollThings = function(){
-
   $(window).scroll(function () {
       var scrollTop = $(window).scrollTop();
-      var fadeOut   = (100 - (scrollTop * .3))/100;
+      var fadeOut   = (100 - (scrollTop * 0.3))/100;
 
       $('.site-title').css({
         'opacity': fadeOut
       });
   });
-};
-
-
-
-
-
-
-aeApp.sessionStorage = function(){
-  if(typeof(Storage) !== "undefined") {
-    // sessionStorage.removeItem("status");
-    //
-    // if (sessionStorage.getItem("returning") === null) {
-    //   console.log('new');
-    //   sessionStorage.setItem("returning", "true");
-    // } else {
-    //   console.log('returning');
-    // }
-  }
 };
 
 aeApp.bodyClass = function() {
@@ -66,7 +45,6 @@ aeApp.bgColor = function() {
         duration: 2400,
         delay: 1000
     });
-
   }
 };
 
@@ -86,7 +64,6 @@ aeApp.bgColor = function() {
 
         onBefore: function(element) {
           targetElement = element;
-
         },
 
         onStart: {
@@ -108,13 +85,11 @@ aeApp.bgColor = function() {
             // Inject the new content
             $container.html($newContent);
             aeApp.onload();
-
           }
         }
       },
       smoothState = $('#main-container').smoothState(options).data('smoothState');
   };
-
 
 
   // Define load object
